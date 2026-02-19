@@ -3,129 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Kemal Şimşek | Akademik Portfolyo</title>
-    <!-- Bootstrap CSS -->
+    <title>Dr. Kemal ŞİMŞEK | Akademik Portfolyo</title>
+    <!-- Google Fonts: Poppins & Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark transition-nav" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#">Dr. Kemal ŞİMŞEK</a>
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-code me-2"></i>Dr. K. ŞİMŞEK
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#home">Ana Sayfa</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">Hakkımda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Eğitim</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Deneyim</a></li>
                     <li class="nav-item"><a class="nav-link" href="#publications">Yayınlar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light ms-lg-3 px-4 btn-sm-custom" href="#contact">İletişim</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section d-flex align-items-center">
-        <div class="container text-center">
-            <img src="profile.jpg" alt="Dr. Kemal Şimşek" class="profile-img mb-4">
-            <h1 class="display-4 fw-bold">Dr. Kemal ŞİMŞEK</h1>
-            <p class="lead">Bilgisayar Mühendisi & Matematik Öğretmeni</p>
-            <div class="social-links mt-4">
-                <a href="mailto:kmlsmsk@gmail.com" class="btn btn-outline-light me-2"><i class="fas fa-envelope"></i> E-Posta</a>
-                <a href="https://linktr.ee/kmlsmsk" target="_blank" class="btn btn-outline-light"><i class="fas fa-link"></i> Linktree</a>
+    <header id="home" class="hero-section d-flex align-items-center text-white">
+        <div class="overlay"></div>
+        <div class="container position-relative text-center" data-aos="fade-up">
+            <!-- Profil Resmi Alanı -->
+            <div class="profile-wrapper mb-4 mx-auto">
+                <img src="profile.jpg" alt="Dr. Kemal Şimşek" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Kemal+Simsek&background=0D8ABC&color=fff&size=200';">
+            </div>
+            
+            <h1 class="display-3 fw-bold mb-3">Dr. Kemal ŞİMŞEK</h1>
+            <h2 class="h4 fw-light mb-4 text-light-50">Bilgisayar Mühendisi & Matematik Öğretmeni</h2>
+            
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Bana Ulaşın</a>
+                <a href="https://linktr.ee/kmlsmsk" target="_blank" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                    <i class="fas fa-link me-2"></i>Linktree
+                </a>
+            </div>
+            
+            <!-- Sosyal İkonlar -->
+            <div class="social-icons mt-5">
+                <a href="mailto:kmlsmsk@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-researchgate"></i></a>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about" class="py-6">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Kariyer Hedefi & Hakkımda</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10 text-center">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="about-img-box">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Education & Tech" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-7 ps-lg-5" data-aos="fade-left">
+                    <h6 class="text-primary text-uppercase fw-bold ls-1">Kariyer Hedefi</h6>
+                    <h2 class="section-title mb-4">Akademik Birikim & <br>Teknolojik Vizyon</h2>
                     <p class="lead text-muted">
-                        Farklı disiplinlerdeki akademik birikimimle, üniversitelerde öğrenci gelişimine katkı sağlayacak bir eğitimci ve araştırmacı olarak görev almak istiyorum. Eğitim teknolojileri, öğretim metodolojileri, yapay zekâ, makine öğrenmesi ve yazılım geliştirme alanlarına odaklanarak, öğrencilere ilham vermeyi ve onları geleceğe hazırlamayı hedefliyorum. Üniversite-sanayi iş birliği projelerinde danışmanlık yaparak, öğrencilerin pratik deneyim kazanmalarına destek olmak ve üniversite yaşamlarını da zenginleştirmek istiyorum.
+                        Farklı disiplinlerdeki akademik birikimimle, üniversitelerde öğrenci gelişimine katkı sağlayacak bir eğitimci ve araştırmacı olarak görev almayı hedefliyorum.
                     </p>
+                    <p class="text-secondary">
+                        Eğitim teknolojileri, öğretim metodolojileri, yapay zekâ, makine öğrenmesi ve yazılım geliştirme alanlarına odaklanarak, öğrencilere ilham vermeyi ve onları geleceğe hazırlamayı amaçlıyorum. Üniversite-sanayi iş birliği projelerinde danışmanlık yaparak pratik deneyimi akademi ile buluşturuyorum.
+                    </p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-2"></i> <span>Yapay Zeka & ML</span>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-2"></i> <span>Eğitim Teknolojileri</span>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-2"></i> <span>Veri Bilimi</span>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-2"></i> <span>Proje Yönetimi</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-5 bg-light">
+    <section id="education" class="py-6 bg-light">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Eğitim Bilgileri</h2>
-            <div class="timeline">
-                <!-- Master's AI (New) -->
-                <div class="timeline-item">
-                    <h5>Yüksek Lisans (Tezsiz) | Yapay Zeka Mühendisliği</h5>
-                    <p class="text-primary">Hoca Ahmet Yesevi Üniversitesi | Şubat 2025 - Devam Ediyor</p>
-                    <p>Mühendislik Fakültesi</p>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-primary text-uppercase fw-bold ls-1">Akademik Geçmiş</h6>
+                <h2 class="section-title">Eğitim Bilgileri</h2>
+            </div>
+            
+            <div class="timeline-wrapper" data-aos="fade-up">
+                <!-- Master's AI (New - Updated) -->
+                <div class="timeline-card left">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary mb-2">Şubat 2026 - Devam Ediyor</span>
+                            <h5 class="fw-bold">Yüksek Lisans (Tezsiz) | Yapay Zeka Mühendisliği</h5>
+                            <p class="text-muted fw-bold mb-1">Hoca Ahmet Yesevi Uluslararası Türk-Kazak Üniversitesi</p>
+                            <p class="small text-secondary mb-0">Mühendislik Fakültesi</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- Doctorate -->
-                <div class="timeline-item">
-                    <h5>Doktora | Bilgisayar Bilimleri</h5>
-                    <p class="text-primary">Ege Üniversitesi | 2020 - Tamamlandı</p>
-                    <p>İzmir, Türkiye | GNO: 3,93 / 4</p>
+                
+                <!-- Doctorate (Updated) -->
+                <div class="timeline-card right">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success mb-2">2020 - 2026</span>
+                            <h5 class="fw-bold">Doktora | Bilgisayar Bilimleri</h5>
+                            <p class="text-muted fw-bold mb-1">Ege Üniversitesi</p>
+                            <p class="small text-secondary mb-0">İzmir, Türkiye | GNO: 3,93 / 4</p>
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Bachelor's CS -->
-                <div class="timeline-item">
-                    <h5>Lisans | Bilgisayar Mühendisliği</h5>
-                    <p class="text-primary">Hoca Ahmet Yesevi Uluslararası Türk-Kazak Üniversitesi | 2021 - 2025</p>
-                    <p>Ankara, Türkiye | GNO: 3,65 / 4</p>
+                <div class="timeline-card left">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-secondary mb-2">2021 - 2025</span>
+                            <h5 class="fw-bold">Lisans | Bilgisayar Mühendisliği</h5>
+                            <p class="text-muted fw-bold mb-1">Hoca Ahmet Yesevi Uluslararası Türk-Kazak Üniversitesi</p>
+                            <p class="small text-secondary mb-0">Ankara, Türkiye | GNO: 3,65 / 4</p>
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Master's Edu Tech -->
-                <div class="timeline-item">
-                    <h5>Yüksek Lisans | Bilgisayar ve Öğretim Teknolojileri Eğitimi</h5>
-                    <p class="text-primary">Ege Üniversitesi | 2014 - 2016</p>
-                    <p>İzmir, Türkiye | GNO: 3,71 / 4</p>
-                </div>
-                <!-- Bachelor's Math -->
-                <div class="timeline-item">
-                    <h5>Lisans | Matematik Öğretmenliği</h5>
-                    <p class="text-primary">Gazi Üniversitesi | 2001 - 2004</p>
-                    <p>Ankara, Türkiye | GNO: 3,13 / 4</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center mb-5">Deneyim</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body">
-                            <h4 class="card-title"><i class="fas fa-book-open text-primary me-2"></i>Kitap Yazarı</h4>
-                            <h6 class="text-muted">Mayıs 2022 - Şubat 2024</h6>
-                            <ul class="mt-3">
-                                <li>“Proje Tasarımı ve Uygulamaları” ders kitabı yazarlığı.</li>
-                                <li>Tasarım Odaklı Düşünme Yaklaşımı rehber kitap hazırlığı.</li>
-                                <li>Finansal, dijital, bilgi ve veri okuryazarlığı etkinlik kitapları.</li>
-                            </ul>
+                <div class="timeline-card right">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-secondary mb-2">2014 - 2016</span>
+                            <h5 class="fw-bold">Yüksek Lisans | Bilgisayar ve Öğretim Teknolojileri</h5>
+                            <p class="text-muted fw-bold mb-1">Ege Üniversitesi</p>
+                            <p class="small text-secondary mb-0">İzmir, Türkiye | GNO: 3,71 / 4</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body">
-                            <h4 class="card-title"><i class="fas fa-chalkboard-teacher text-primary me-2"></i>Matematik Öğretmeni</h4>
-                            <h6 class="text-muted">Şubat 2005 - Halen</h6>
-                            <ul class="mt-3">
-                                <li>TÜBİTAK projelerinde danışmanlık (3 kez Türkiye derecesi).</li>
-                                <li>Matematik eğitimi alanındaki güncel gelişmelerin takibi ve kongre katılımları.</li>
-                            </ul>
+                
+                 <!-- Bachelor's Math -->
+                 <div class="timeline-card left">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <span class="badge bg-secondary mb-2">2001 - 2004</span>
+                            <h5 class="fw-bold">Lisans | Matematik Öğretmenliği</h5>
+                            <p class="text-muted fw-bold mb-1">Gazi Üniversitesi</p>
+                            <p class="small text-secondary mb-0">Ankara, Türkiye | GNO: 3,13 / 4</p>
                         </div>
                     </div>
                 </div>
@@ -133,71 +186,163 @@
         </div>
     </section>
 
-    <!-- Skills & Certificates -->
-    <section id="skills" class="py-5 bg-light">
+    <!-- Experience & Projects Section -->
+    <section id="experience" class="py-6">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Beceriler ve Sertifikalar</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4>Teknik Beceriler</h4>
-                    <div class="d-flex flex-wrap gap-2 mt-3">
-                        <span class="badge bg-secondary p-2">Yapay Zeka</span>
-                        <span class="badge bg-secondary p-2">Derin Öğrenme</span>
-                        <span class="badge bg-secondary p-2">Makine Öğrenmesi</span>
-                        <span class="badge bg-secondary p-2">Python</span>
-                        <span class="badge bg-secondary p-2">Veri Bilimi</span>
-                        <span class="badge bg-secondary p-2">Eğitim Teknolojileri</span>
-                        <span class="badge bg-secondary p-2">Büyük Veri</span>
-                        <span class="badge bg-secondary p-2">Doğal Dil İşleme (NLP)</span>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-primary text-uppercase fw-bold ls-1">Profesyonel Hayat</h6>
+                <h2 class="section-title">Deneyim ve Projeler</h2>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card p-4 h-100">
+                        <div class="icon-box mb-3 bg-primary-soft text-primary">
+                            <i class="fas fa-book-reader fa-2x"></i>
+                        </div>
+                        <h4 class="mb-3">Kitap Yazarı</h4>
+                        <p class="text-muted small">MEB için "Proje Tasarımı", "Tasarım Odaklı Düşünme" ve okuryazarlık alanlarında (dijital, finansal, veri) rehber kitaplar hazırlandı.</p>
+                        <span class="badge bg-light text-dark mt-2">Mayıs 2022 - Şubat 2024</span>
                     </div>
                 </div>
-                <div class="col-md-6 mt-4 mt-md-0">
-                    <h4>Öne Çıkan Sertifikalar (BTK Akademi)</h4>
-                    <ul class="list-group list-group-flush mt-3 bg-transparent">
-                        <li class="list-group-item bg-transparent"><i class="fas fa-certificate text-warning me-2"></i>İleri Seviye Python Programlama</li>
-                        <li class="list-group-item bg-transparent"><i class="fas fa-certificate text-warning me-2"></i>Apache Kafka & Elasticsearch</li>
-                        <li class="list-group-item bg-transparent"><i class="fas fa-certificate text-warning me-2"></i>Veri Bilimi ve Makine Öğrenmesi Atölyesi</li>
-                        <li class="list-group-item bg-transparent"><i class="fas fa-certificate text-warning me-2"></i>Doğal Dil İşlemeye Giriş</li>
-                    </ul>
+
+                <!-- Card 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card p-4 h-100">
+                        <div class="icon-box mb-3 bg-primary-soft text-primary">
+                            <i class="fas fa-chalkboard-teacher fa-2x"></i>
+                        </div>
+                        <h4 class="mb-3">Matematik Öğretmeni</h4>
+                        <p class="text-muted small">Ulusal ve uluslararası kongrelere katılım. Öğrenci danışmanlığı ile akademik başarının artırılması çalışmaları.</p>
+                        <span class="badge bg-light text-dark mt-2">Şubat 2005 - Halen</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card p-4 h-100">
+                        <div class="icon-box mb-3 bg-primary-soft text-primary">
+                            <i class="fas fa-atom fa-2x"></i>
+                        </div>
+                        <h4 class="mb-3">TÜBİTAK Projeleri</h4>
+                        <p class="text-muted small">TÜBİTAK 4004 (Proje No:118B401) kapsamında animasyon geliştirme. Öğrenci projelerinde danışmanlık ile <strong>3 kez Türkiye derecesi</strong>.</p>
+                        <span class="badge bg-light text-dark mt-2">Proje Danışmanı</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-6 bg-dark text-white position-relative">
+        <div class="container position-relative z-1">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title text-white mb-4">Teknik Yetkinlikler</h2>
+                    <p class="text-white-50 mb-4">Akademik çalışmalarımı modern yazılım teknolojileri ile birleştirerek veri odaklı çözümler üretiyorum.</p>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Python & Veri Bilimi</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress mt-1" style="height: 6px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Makine Öğrenmesi & DL</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress mt-1" style="height: 6px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Eğitim Teknolojileri</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="progress mt-1" style="height: 6px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%"></div>
+                        </div>
+                    </div>
+                     <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Büyük Veri & Analitik</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress mt-1" style="height: 6px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5 offset-lg-1 mt-5 mt-lg-0" data-aos="fade-left">
+                    <div class="card bg-secondary border-0 text-white">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4"><i class="fas fa-certificate text-warning me-2"></i>BTK Akademi Sertifikaları</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> İleri Seviye Python Programlama</li>
+                                <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Apache Kafka & Elasticsearch v8</li>
+                                <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Veri Bilimi ve Makine Öğrenmesi Atölyesi</li>
+                                <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Doğal Dil İşlemeye Giriş (NLP)</li>
+                                <li class="mb-3 d-flex"><i class="fas fa-check text-primary me-2 mt-1"></i> Django ile Web Geliştirme</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Publications -->
-    <section id="publications" class="py-5">
+    <section id="publications" class="py-6">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Yayınlar ve Eserler</h2>
-            <div class="accordion" id="pubAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#books">
-                            Yazılan Kitaplar
-                        </button>
-                    </h2>
-                    <div id="books" class="accordion-collapse collapse show" data-bs-parent="#pubAccordion">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Proje Tasarımı ve Uygulamaları Öğretmen Kılavuz Kitabı (MEB, 2024)</li>
-                                <li>Tasarım Odaklı Düşünme İle Proje Hazırlama Öğretmen Rehber Kitabı (MEB, 2023)</li>
-                                <li>Veri Okuryazarlığı Becerileri Etkinlik Kitabı (MEB, 2023)</li>
-                                <li>Dijital Okuryazarlık Becerileri Etkinlik Kitabı (MEB, 2023)</li>
-                            </ul>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-primary text-uppercase fw-bold ls-1">Bilimsel Üretim</h6>
+                <h2 class="section-title">Yayınlar & Kitaplar</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion custom-accordion" id="pubAccordion" data-aos="fade-up">
+                        <!-- Item 1 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#books">
+                                    <i class="fas fa-book me-3 text-primary"></i> MEB Tarafından Yayınlanan Kitaplar
+                                </button>
+                            </h2>
+                            <div id="books" class="accordion-collapse collapse show" data-bs-parent="#pubAccordion">
+                                <div class="accordion-body bg-white">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Proje Tasarımı ve Uygulamaları Öğretmen Kılavuz Kitabı (2024)</li>
+                                        <li class="list-group-item">Tasarım Odaklı Düşünme İle Proje Hazırlama Öğretmen Rehber Kitabı (2023)</li>
+                                        <li class="list-group-item">Veri Okuryazarlığı Becerileri Etkinlik Kitabı (2023)</li>
+                                        <li class="list-group-item">Dijital Okuryazarlık Becerileri Etkinlik Kitabı (2023)</li>
+                                        <li class="list-group-item">Finansal Okuryazarlık Becerileri Etkinlik Kitabı (2023)</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#articles">
-                            Makaleler
-                        </button>
-                    </h2>
-                    <div id="articles" class="accordion-collapse collapse" data-bs-parent="#pubAccordion">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>“Ontological development of a competency based and learning objective oriented measurement tool,” i-manager’s Journal of Educational Technology, 2022.</li>
-                                <li>“Effects of Computer Algebra Systems on Academic Success in Blended Learning Environments,” Necatibey Eğitim Fakültesi Dergisi, 2019.</li>
-                            </ul>
+                        <!-- Item 2 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#articles">
+                                    <i class="fas fa-newspaper me-3 text-primary"></i> Uluslararası Makaleler
+                                </button>
+                            </h2>
+                            <div id="articles" class="accordion-collapse collapse" data-bs-parent="#pubAccordion">
+                                <div class="accordion-body bg-white">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><strong>Ş. Kemal</strong>, et al., “Ontological development of a competency based and learning objective oriented measurement tool,” i-manager’s Journal of Educational Technology, 2022.</li>
+                                        <li class="list-group-item"><strong>Kemal ŞİMŞEK</strong> & Jale İPEK, “Effects of Computer Algebra Systems on Academic Success in Blended Learning Environments,” Necatibey Eğitim Fakültesi Dergisi, 2019.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,32 +350,54 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-dark text-white">
+    <!-- Footer -->
+    <footer id="contact" class="bg-darker text-white py-5 border-top border-secondary">
         <div class="container text-center">
-            <h2 class="mb-4">İletişim</h2>
-            <p>Projeler, akademik iş birlikleri veya danışmanlık için iletişime geçebilirsiniz.</p>
-            <div class="row justify-content-center mt-4">
-                <div class="col-md-4 mb-3">
-                    <i class="fas fa-phone fa-2x mb-2 text-primary"></i>
-                    <p>+90 (505) 660-1081</p>
+            <h2 class="fw-bold mb-4">İletişime Geçin</h2>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-3 mb-3">
+                    <div class="contact-box p-3 border border-secondary rounded hover-top">
+                        <i class="fas fa-phone fa-2x text-primary mb-3"></i>
+                        <p class="mb-0">   </p>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <i class="fas fa-envelope fa-2x mb-2 text-primary"></i>
-                    <p>kmlsmsk@gmail.com</p>
+                <div class="col-md-3 mb-3">
+                    <div class="contact-box p-3 border border-secondary rounded hover-top">
+                        <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                        <p class="mb-0">kmlsmsk@gmail.com</p>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <i class="fas fa-map-marker-alt fa-2x mb-2 text-primary"></i>
-                    <p>İzmir, Türkiye</p>
+                <div class="col-md-3 mb-3">
+                    <div class="contact-box p-3 border border-secondary rounded hover-top">
+                        <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
+                        <p class="mb-0">İzmir, Türkiye</p>
+                    </div>
                 </div>
             </div>
-            <div class="mt-4">
-                <p class="small text-muted">&copy; 2025 Dr. Kemal Şimşek. Tüm hakları saklıdır.</p>
-            </div>
+            <p class="small text-muted mb-0">&copy; 2025 Dr. Kemal Şimşek. Tüm hakları saklıdır. | Designed with <i class="fas fa-heart text-danger"></i> & AI</p>
         </div>
-    </section>
+    </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap & Plugins -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Init Animations
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
