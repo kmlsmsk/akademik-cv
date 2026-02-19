@@ -1,83 +1,213 @@
-/* Genel Ayarlar */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    padding-top: 56px; /* Navbar yüksekliği kadar boşluk */
+/* --- Değişkenler & Genel Ayarlar --- */
+:root {
+    --primary-color: #2563eb; /* Modern Tech Blue */
+    --secondary-color: #64748b;
+    --dark-bg: #0f172a;
+    --darker-bg: #020617;
+    --light-bg: #f8fafc;
+    --text-color: #334155;
 }
 
-/* Hero Section (Üst Kısım) */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, temiz font */
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.ls-1 { letter-spacing: 2px; }
+
+/* --- Navbar --- */
+.navbar {
+    transition: all 0.4s ease;
+    padding: 1.2rem 0;
+    background-color: transparent;
+}
+
+.navbar-scrolled {
+    background-color: rgba(15, 23, 42, 0.95); /* Yarı saydam koyu arka plan */
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width .3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-sm-custom {
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+/* --- Hero Section --- */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-    background-size: cover;
-    background-position: center;
+    position: relative;
     height: 100vh;
-    color: white;
+    min-height: 600px;
+    background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax efekti */
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(37, 99, 235, 0.7) 100%);
+}
+
+.profile-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
 }
 
 .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.3);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border: 4px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* Başlıklar */
-.section-title {
-    position: relative;
-    padding-bottom: 15px;
-    font-weight: 700;
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: transform 0.3s, color 0.3s;
 }
 
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #0d6efd; /* Bootstrap primary color */
-}
-
-/* Timeline (Eğitim Kısmı İçin) */
-.timeline {
-    border-left: 3px solid #0d6efd;
-    padding-left: 30px;
-    margin-left: 20px;
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -39px;
-    top: 5px;
-    width: 15px;
-    height: 15px;
-    background-color: white;
-    border: 3px solid #0d6efd;
-    border-radius: 50%;
-}
-
-/* Kartlar */
-.card {
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
+.social-icons a:hover {
+    color: var(--primary-color);
     transform: translateY(-5px);
 }
 
-/* Responsive Ayarlar */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
+/* --- Timeline (Eğitim) --- */
+.timeline-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+.timeline-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #e2e8f0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+}
+
+.timeline-card {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-card.left { left: 0; text-align: right; }
+.timeline-card.right { left: 50%; text-align: left; }
+
+.timeline-card::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: white;
+    border: 4px solid var(--primary-color);
+    top: 50%; /* Ortala */
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.timeline-card.right::after {
+    left: -10px;
+}
+
+/* Mobil için Timeline düzeltmesi */
+@media (max-width: 768px) {
+    .timeline-wrapper::after { left: 31px; }
+    .timeline-card { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
+    .timeline-card.left, .timeline-card.right { left: 0; }
+    .timeline-card.left::after, .timeline-card.right::after { left: 21px; }
+}
+
+/* --- Service Cards (Deneyim) --- */
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.bg-primary-soft {
+    background-color: rgba(37, 99, 235, 0.1);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* --- Footer --- */
+.bg-darker { background-color: var(--darker-bg); }
+
+.hover-top {
+    transition: transform 0.3s;
+}
+.hover-top:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color) !important;
+}
+
+/* Resim Düzeltme Notu: Eğer resim hala görünmüyorsa placeholder.com kullanıldı. */
